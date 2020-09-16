@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+
 * {
-    border: 1px solid;
-    box-sizing: border-box;
+	/* border: 1px solid; */
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	font-family: 'Tajawal', sans-serif;
 }
 
 .navbar-brand {
-    font-size: 24px;
+	font-size: 20px;
 }
 
-.navbar, .navbar-expand-lg {
-    background-color: rgba(249, 229, 229, 40%);
+.navbar,
+.navbar-expand-md {
+	background-color: rgba(249, 229, 229, 100%);
+}
+
+nav.navbar.navbar-expand-md.navbar-light {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+button:focus {
+	outline-color: black;
+}
+
+.nav-item:hover {
+	text-decoration-line: underline;
 }
 
 /* not currently changing color - need to investigate and research bootstrap here */
@@ -16,50 +38,131 @@
    color: black; 
 } */
 
-body .container {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-rows: auto 1fr 1fr 1fr auto;
-    grid-template-columns: 1fr;
-    padding: 0px;
-    grid-template-areas:
-    "home"
-    "about"
-    "projects"
-    "contact"
-    "footer"
+.container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: 1fr;
+	padding-top: 50px;
+	grid-template-areas:
+		'home'
+		'about'
+		'projects'
+		'contact'
+		'footer';
 }
 
 .container #home {
-    grid-area: home;
-    padding: 20px;
-
+	grid-area: home;
+	padding: 10px;
 }
 
-.headshot {
-    display: flex;
-    width: 200px;
-    height: 200px;
+#home .home-intro {
+	font-size: 30px;
+	padding-top: 15px;
+	letter-spacing: 3px;
 }
 
-#about {
-    grid-area: about;
+#home h4 {
+	font-size: 22px;
+}
 
+.container #about {
+	grid-area: about;
+	display: grid;
+	margin-top: 50px;
+}
+
+#about .headshot {
+	display: flex;
+	width: 200px;
+	height: 200px;
+	justify-self: center;
+	margin-bottom: 15px;
+}
+
+#about p {
+	display: flex;
+	/* text-justify: auto; */
+	padding: 10px 20px 0px 20px;
 }
 
 .container #projects {
-    grid-area: projects;
+	grid-area: projects;
+	grid-template-rows: auto auto auto;
+	margin-top: 10px;
+}
+
+.project-cards-container .project-cards {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+.project-cards-container .card {
+	display: flex;
+	margin: 10px;
+	/* overflow: hidden; */
+}
+
+.card-img-top {
+	height: 155px;
+	object-fit: cover;
+}
+
+#card-button {
+	padding: 6px 15px 3px 15px;
+	margin: 0 5px;
+	border-radius: 10px;
+	background-color: rgba(249, 229, 229, 100%);
+	box-shadow: 2px 2px 2px #c4c2c2;
+	transition: all 100ms ease-in-out;
+}
+
+#card-button:hover {
+	/* opacity: 50%; */
+	cursor: pointer;
+	box-shadow: 1px 1px 2px #000000;
 }
 
 .container #contact {
-    grid-area: contact;
+	grid-area: contact;
+	margin-top: 10px;
 }
 
 input {
-    display: flex;
+	/* display: flex; */
 }
 
-.container footer {
-    grid-area: footer;
-    justify-self: center;
+.contact-form .form-group {
+	margin: 10px auto;
+	justify-items: center;
+	width: 75%;
+	border-radius: 10px;
+}
+
+.contact-form .submitbutton {
+	padding: 10px 30px 5px 30px;
+	border: none;
+	border-radius: 10px;
+	background-color: rgba(249, 229, 229, 100%);
+	box-shadow: 2px 2px 2px #c4c2c2;
+	transition: all 100ms ease-in-out;
+}
+
+.submitbutton:hover {
+	/* opacity: 50%; */
+	cursor: pointer;
+	box-shadow: 1px 1px 2px #000000;
+}
+
+footer {
+	/* grid-area: footer; */
+	align-self: end;
+	padding: 10px 5px;
+}
+
+body .section-title {
+	font-size: 35px;
+	margin-top: 20px;
 }

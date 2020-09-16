@@ -23,7 +23,7 @@ $.ajax({ url: sheetAsJSON }).then((data) => {
 		};
 	});
 	render(projects);
-	console.log(projects);
+	// console.log(projects);
 });
 
 const render = (array) => {
@@ -35,8 +35,8 @@ const render = (array) => {
                 <h5 class="card-title">${project.title}</h5>
                 <p class="card-desc">${project.description}</p>
                 <p class="card-tools">${project.tools}</p>
-                <a href="${project.githuburl}" class="btn btn-view-code">View Code</a>
-                <a href="${project.liveurl}" class="btn btn-view-project">View Project</a>
+                <a href="${project.githuburl}" class="btn btn-view-code" id="card-button">View Code</a>
+                <a href="${project.liveurl}" class="btn btn-view-project" id="card-button">View Project</a>
             </div>
         </div>`
 		);
