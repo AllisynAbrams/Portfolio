@@ -1,0 +1,65 @@
+* {
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar, .navbar-expand-lg {
+    background-color: rgba(249, 229, 229, 40%);
+}
+
+/* not currently changing color - need to investigate and research bootstrap here */
+/* .navbar .nav-item a {
+   color: black; 
+} */
+
+body .container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr;
+    padding: 0px;
+    grid-template-areas:
+    "home"
+    "about"
+    "projects"
+    "contact"
+    "footer"
+}
+
+.container #home {
+    grid-area: home;
+    padding: 20px;
+
+}
+
+.headshot {
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+#about {
+    grid-area: about;
+
+}
+
+.container #projects {
+    grid-area: projects;
+}
+
+.container #contact {
+    grid-area: contact;
+}
+
+input {
+    display: flex;
+}
+
+.container footer {
+    grid-area: footer;
+    justify-self: center;
+}
