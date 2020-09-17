@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Tajawal:wght@300&display=swap');
 
 * {
 	/* border: 1px solid; */
@@ -11,11 +11,15 @@ body {
 }
 
 .navbar-brand {
-	font-size: 20px;
+    font-size: 22px;
+    font-family: 'Nothing You Could Do', cursive;
+    font-weight: bolder;
 }
 
-.navbar,
-.navbar-expand-md {
+.nav-link, .nav-item {
+    font-size: 18px;
+}
+.navbar, .navbar-expand-md {
 	background-color: rgba(249, 229, 229, 100%);
 }
 
@@ -54,27 +58,35 @@ button:focus {
 
 .container #home {
 	grid-area: home;
-	padding: 10px;
+    padding: 10px;
+    /* background-color: #b5d4c4; */
 }
 
 #home .home-intro {
 	font-size: 30px;
 	padding-top: 15px;
-	letter-spacing: 3px;
+    letter-spacing: 3px;
 }
 
 #home h4 {
-	font-size: 22px;
+    font-size: 22px;
+    
+    
+}
+
+#home .myname {
+    font-weight: bold;
 }
 
 .container #about {
 	grid-area: about;
-	display: grid;
+    display: flex;
+    flex-flow: column wrap;
 	margin-top: 50px;
 }
 
+
 #about .headshot {
-	display: flex;
 	width: 200px;
 	height: 200px;
 	justify-self: center;
@@ -82,9 +94,9 @@ button:focus {
 }
 
 #about p {
-	display: flex;
-	/* text-justify: auto; */
-	padding: 10px 20px 0px 20px;
+    display: flex;
+    justify-self: center;
+	padding: 10px 30px 0px 30px;
 }
 
 .container #projects {
@@ -100,7 +112,8 @@ button:focus {
 }
 
 .project-cards-container .card {
-	display: flex;
+    display: flex;
+    flex-wrap: wrap;
 	margin: 10px;
 	/* overflow: hidden; */
 }
@@ -120,7 +133,6 @@ button:focus {
 }
 
 #card-button:hover {
-	/* opacity: 50%; */
 	cursor: pointer;
 	box-shadow: 1px 1px 2px #000000;
 }
@@ -130,9 +142,6 @@ button:focus {
 	margin-top: 10px;
 }
 
-input {
-	/* display: flex; */
-}
 
 .contact-form .form-group {
 	margin: 10px auto;
@@ -151,7 +160,6 @@ input {
 }
 
 .submitbutton:hover {
-	/* opacity: 50%; */
 	cursor: pointer;
 	box-shadow: 1px 1px 2px #000000;
 }
@@ -165,4 +173,32 @@ footer {
 body .section-title {
 	font-size: 35px;
 	margin-top: 20px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  .aboutmemain-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0 10px;
+    }
+
+    #about p {
+        align-self: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+.card p, .card-body a, #contact p, #contact .submitbutton, #about p {
+    /* color: red; */
+    font-size: 18px;
+
+}
+.card-button {
+}
+
 }

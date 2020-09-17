@@ -42,3 +42,14 @@ const render = (array) => {
 		);
 	});
 };
+
+const userInput = [];
+$('form').on('submit', (event) => {
+	event.preventDefault();
+	const inputText = $('input[type="email"]').val();
+	// /*reference element, reference property type, reference value(text)*/
+	console.log('this is inputText - ', inputText);
+	userInput.push(inputText);
+	console.log('this is the userInput array - ', userInput);
+	$(event.currentTarget).trigger('reset');
+});
