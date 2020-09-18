@@ -210,7 +210,7 @@ anchor {
 ## Issues and Resolutions
 Use this section to list of all major issues encountered and their resolution:
 
-**Issue 1**: I was to use anchor tags in combination #s/IDs to allow the nav links navigate to different sections of the page. However, the nav-links were originally bringing the user to a view of the middle of the section rather than bringing them right to the top of the section (which is what I wanted). I was determined to fix this to make the nav-links jump the to top of the anchore section rather than somewhere in the middle of it.
+**Issue**: I was to use anchor tags in combination #s/IDs to allow the nav links navigate to different sections of the page. However, the nav-links were originally bringing the user to a view of the middle of the section rather than bringing them right to the top of the section (which is what I wanted). I was determined to fix this to make the nav-links jump the to top of the anchore section rather than somewhere in the middle of it.
  
 **Resolution**: I researched this quite a bit a found some helpful references on stackoverflow. I created empty spans/classes within each section's parent div. Then, using CSS (above), I added top padding and top negative margin to these spans to make enough sort of "fake space" above them so that when their anchor tags are clicked, the top most part of the section does not go behind/above the sticky nav and is therefore visible.
 https://stackoverflow.com/questions/1418838/html-making-a-link-lead-to-the-anchor-centered-in-the-middle-of-the-page 
