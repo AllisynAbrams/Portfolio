@@ -186,17 +186,17 @@ button:focus {
 /* -------- FOOTER -------- */
 
 footer {
-	/* grid-area: footer; */
+	grid-area: footer; 
 	align-self: end;
 	padding: 10px 5px;
 }
 
-/* .footer-links {
-	display: flex;
+.footer-links {
+	/* display: flex;
 	margin: 0 auto;
-	justify-content: center;
+	justify-content: center; */
 	margin-bottom: -20px;
-} */
+}
 
 .footer-links a {
 	padding: 0 4px;
