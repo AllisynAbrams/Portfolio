@@ -191,12 +191,12 @@ footer {
 	padding: 10px 5px;
 }
 
-.footer-links {
+/* .footer-links {
 	display: flex;
-	/* margin: 0 auto; */
+	margin: 0 auto;
 	justify-content: center;
 	margin-bottom: -20px;
-}
+} */
 
 .footer-links a {
 	padding: 0 4px;
