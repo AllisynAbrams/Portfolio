@@ -4,26 +4,49 @@
 	/* border: 1px solid; */
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	text-align: center;
 	font-family: 'Tajawal', sans-serif;
 }
 
-.navbar-brand {
-    font-size: 22px;
-    font-family: 'Nothing You Could Do', cursive;
-    font-weight: bolder;
+body .section-title {
+	font-size: 35px;
+	margin-top: 45px;
 }
 
-.nav-link, .nav-item {
-    font-size: 18px;
+/* -------- NAVIGATION BAR -------- */
+.navbar-brand {
+	font-size: 22px;
+	font-family: 'Nothing You Could Do', cursive;
+	font-weight: bolder;
 }
-.navbar, .navbar-expand-md {
+
+.nav-item:hover {
+	text-decoration-line: underline;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+a.nav-link {
+	font-size: 18px;
+	color: black;
+}
+
+.nav-item:hover {
+	text-decoration-line: underline;
+}
+.navbar,
+.navbar-expand-lg {
 	background-color: rgba(249, 229, 229, 100%);
 }
 
-nav.navbar.navbar-expand-md.navbar-light {
+nav.navbar.navbar-expand-lg.navbar-light {
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -33,21 +56,14 @@ button:focus {
 	outline-color: black;
 }
 
-.nav-item:hover {
-	text-decoration-line: underline;
-}
-
-/* not currently changing color - need to investigate and research bootstrap here */
-/* .navbar .nav-item a {
-   color: black; 
-} */
+/* -------- BODY -------- */
 
 .container {
 	display: grid;
 	grid-gap: 10px;
 	grid-template-rows: auto auto auto auto auto;
 	grid-template-columns: 1fr;
-	padding-top: 50px;
+	padding-top: 25px;
 	grid-template-areas:
 		'home'
 		'about'
@@ -56,48 +72,50 @@ button:focus {
 		'footer';
 }
 
+/* -------- HOME / INTRO -------- */
+
 .container #home {
 	grid-area: home;
-    padding: 10px;
-    /* background-color: #b5d4c4; */
+	align-items: center;
+	margin-top: 10px;
+	/* background-color: #b5d4c4; */
 }
 
-#home .home-intro {
+#home .intro-heading {
 	font-size: 30px;
-	padding-top: 15px;
-    letter-spacing: 3px;
+	letter-spacing: 3px;
 }
 
-#home h4 {
-    font-size: 22px;
-    
-    
+#home .intro-heading .myname {
+	font-weight: bold;
 }
 
-#home .myname {
-    font-weight: bold;
+#home .intro-subheading {
+	font-size: 22px;
 }
+
+/* -------- ABOUT ME -------- */
 
 .container #about {
 	grid-area: about;
-    display: flex;
-    flex-flow: column wrap;
-	margin-top: 50px;
+	display: flex;
+	flex-flow: column wrap;
 }
-
 
 #about .headshot {
 	width: 200px;
 	height: 200px;
 	justify-self: center;
-	margin-bottom: 15px;
 }
 
 #about p {
-    display: flex;
-    justify-self: center;
+	display: flex;
+	justify-self: center;
 	padding: 10px 30px 0px 30px;
+	margin-bottom: 0;
 }
+
+/* -------- PROJECTS -------- */
 
 .container #projects {
 	grid-area: projects;
@@ -112,8 +130,8 @@ button:focus {
 }
 
 .project-cards-container .card {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 	margin: 10px;
 	/* overflow: hidden; */
 }
@@ -137,11 +155,12 @@ button:focus {
 	box-shadow: 1px 1px 2px #000000;
 }
 
+/* -------- CONTACT  -------- */
+
 .container #contact {
 	grid-area: contact;
 	margin-top: 10px;
 }
-
 
 .contact-form .form-group {
 	margin: 10px auto;
@@ -164,41 +183,49 @@ button:focus {
 	box-shadow: 1px 1px 2px #000000;
 }
 
+/* -------- FOOTER -------- */
+
 footer {
 	/* grid-area: footer; */
 	align-self: end;
 	padding: 10px 5px;
 }
 
-body .section-title {
-	font-size: 35px;
-	margin-top: 20px;
+.footer-links {
+	display: flex;
+	width: 25%;
+	margin: 0 auto;
+	justify-content: space-evenly;
+	margin-bottom: -20px;
 }
 
+/* -------- OTHER-------- */
 
-/* MEDIA QUERIES */
+/* -------- MEDIA QUERIES-------- */
 
 @media (min-width: 768px) {
-  .aboutmemain-container{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    padding: 0 10px;
-    }
+	.aboutmemain-container {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		padding: 0 10px;
+	}
 
-    #about p {
-        align-self: center;
-    }
+	#about p {
+		align-self: center;
+	}
 }
 
 @media (min-width: 1024px) {
-
-.card p, .card-body a, #contact p, #contact .submitbutton, #about p {
-    /* color: red; */
-    font-size: 18px;
-
-}
-.card-button {
-}
-
+	.card p,
+	#contact p,
+	#contact .submitbutton,
+	#about p,
+	#projects p {
+		/* color: red; */
+		font-size: 18px;
+	}
+	.card-button {
+		position: relative;
+	}
 }

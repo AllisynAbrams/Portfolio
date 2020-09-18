@@ -53,3 +53,8 @@ $('form').on('submit', (event) => {
 	console.log('this is the userInput array - ', userInput);
 	$(event.currentTarget).trigger('reset');
 });
+
+// ggoled "how to automatically collapse bootstrap navbar" and used this article as a starting point but wrote my onclick method moreso in the format we learned and chose to listen to nav-link because i want nav to close specifically when user clicks on a link  https://stackoverflow.com/questions/14248194/close-responsive-navbar-automatically
+$('.nav-link').on('click', () => {
+	$('.navbar-collapse').collapse('hide');
+});
