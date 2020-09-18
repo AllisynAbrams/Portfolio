@@ -18,7 +18,13 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This project is the first version of my professional portfolio. I will use jQuery, JavaScript, Bootstrap, CSS, and responsive design to include various sections and functionalities as briefly outlined below:
+- highlight info about myself/brand statement
+- display image previews and details about my previous projects, as well as link to the source code on github and the live project (use jQuery $.ajax({}) method to retrieve external project data from a googlesheet)
+- provide a form for users to fill out and submit to contact me
+- provide links to my GitHub and LinkedIn pages
+- allow users to easily navigate to and view different sections of the page via an expandable/collapsable navigation bar
+
 
 ## Google Sheet
 
@@ -50,7 +56,7 @@ Now create a separate list starting with A and assign it one of the features.  C
 
 Once complete tally up the time and determine how long the project will take to complete. Now break those features into MVP and PostMVP so you can guarantee you will have a fully functioning project to demo. 
 
-### MVP/PostMVP - 5min
+### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
@@ -75,10 +81,11 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### PostMVP
 - add hover animation on buttons and links
-- contact Info box (location and email) in the "contact section" (additional to contact form)
-- add github and linkedin icons to mobile/tablet hamburger nav
+- contact info box (location and email) in the "contact section" (additional to contact form)
 - learn and implement additional uses of bootstrap
-- carousel for project cards
+- make navbar collapse on click of link (added during project week)
+- add github and linkedin icons to mobile/tablet hamburger nav -> did not implement (should be a quick add post-project now that I already have <a> tags for social icons in the footer)
+- carousel for project cards -> did not implement -> still plan to utilize Bootstrap carousel component to implement this feature into my portfolio in the future
 
 ## Functional Components
 
@@ -87,28 +94,6 @@ Based on the initial logic defined in the previous sections try and breakdown th
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
 #### MVP
-
-|  Component  |  Priority  |  Estimated Time (Hrs)  |  Actual Time  |
-|  ---  |  :---:  |   :---:  |  :---:  |
-| create top-level HTML sections for grid layout purposes (header w/ brand name & nav, intro banner, about me, projects, get in touch, footer) | H | 1 |  hrs  |
-| create top-level CSS grid layout (for visual purposes) | H | 1 |  hrs  |
-| header section - regular nav bar + expandable hamburger nav with flexbox *use bootstrap* | H | 2 |  hrs  |
-| header section - CSS/style nav | H | 1.5 |  hrs  |
-| intro banner section (hi, my name is..) | L | 1 |  hrs  |
-| about me section (photo & brand statement) - reminder: make photo circular  | H | 2 |  hrs  |
-| update googlesheet w/ project data (title, image (take and upload screen shots), description, tech used, url (github repo and github pages)) | H | 2 |  hrs  |
-| projects section - pull in project data from googlesheet via json api call | H | 2.5 |  hrs  |
-| projects section - render and format project images/data on the page - grid/flexbox *possibly use a version of bootstrap cards* | H | 3 |  hrs  |
-| projects section - css/style project previews & data | H | 2 |  hrs  |
-| contact section - adding and styling contact form | H | 2 |  hrs  |
-| footer section - adding and styling (name and adding social icons) | L | 1.5 |  hrs  |
-| media queries for tablet responsive  | H | 1 |  hrs  |
-| media queries for desktop responsive  | H | 2 |  hrs  |
-| set up github pages for portfolio and featured projects | H | 2.5 |  hrs  |
-| testing & de-bugging | H | 2 |  hrs  |
-| choose fonts and color scheme | M | 1 |  hrs  |
-|  Total  | H | 30 |  hrs  |
-
 
 |  Component  |  Priority  |  Estimated Time  |  Actual Time  |
 |  ---  |  :---:  |   :---:  |  :---:  |
@@ -135,16 +120,6 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 |  Component  |  Priority  |  Estimated Time  |  Actual Time  |
 |  ---  |  :---:  |   :---:  |  :---:  |
-| add hover animation on buttons and links | L | 2.5 |  |
-| contact Info box (location and email) in the "contact section" (additional to contact form) | L | 2 |  |
-| add github and linkedin icons to mobile/tablet hamburger nav | L | 1.5 |  |
-| learn and implement uses of bootstrap | L | 3 |  |
-| carousel for project cards | L | 3 |  |
-| Total | L | 12 |  |
-
-
-|  Component  |  Priority  |  Estimated Time  |  Actual Time  |
-|  ---  |  :---:  |   :---:  |  :---:  |
 | add hover animation on buttons and links | H | 2.5 | 1.5 |
 | contact Info box (location and email) in the "contact section" (additional to contact form) | H | 2 | 2.5 |
 | learn and implement uses of bootstrap | H | 3 | 1.5 |
@@ -152,6 +127,11 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | add github and linkedin icons to mobile/tablet hamburger nav | L | 1.5 | 0 |
 | carousel for project cards | L | 3 | 0 |
 | Total | M | 12 | 6.5 |
+
+#### TOTAL
+|  Component  |  Priority  |  Estimated Time  |  Actual Time  |
+|  ---  |  :---:  |   :---:  |  :---:  |
+| TOTAL | - | 42 | 30 |
 
 
 
@@ -227,13 +207,16 @@ I was determined to make viisble the start of each section when the associated a
  - To note, while I am proud of figuring out and playing aroudn with this functionality, I do see it as a sort of temporary fix via HTML/CSS. I look forwad to figuring out how to do the same using JavaScript/jQuery/React in the future!
 Reference: https://stackoverflow.com/questions/1418838/html-making-a-link-lead-to-the-anchor-centered-in-the-middle-of-the-page 
 
-
-
-
 ```
 
 ## Issues and Resolutions
- Use this section to list of all major issues encountered and their resolution.
+Use this section to list of all major issues encountered and their resolution:
+
+**Issue 1**: I was to use anchor tags in combination #s/IDs to allow the nav links navigate to different sections of the page. However, the nav-links were originally bringing the user to a view of the middle of the section rather than bringing them right to the top of the section (which is what I wanted). I was determined to fix this to make the nav-links jump the to top of the anchore section rather than somewhere in the middle of it.
+ 
+**Resolution**: I researched this quite a bit a found some helpful references on stackoverflow. I created empty spans/classes within each section's parent div. Then, using CSS (above), I added top padding and top negative margin to these spans to make enough sort of "fake space" above them so that when their anchor tags are clicked, the top most part of the section does not go behind/above the sticky nav and is therefore visible.
+https://stackoverflow.com/questions/1418838/html-making-a-link-lead-to-the-anchor-centered-in-the-middle-of-the-page 
+
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
