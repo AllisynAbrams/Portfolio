@@ -192,15 +192,14 @@ footer {
 }
 
 .footer-links {
-	/* display: flex;
-	margin: 0 auto;
-	justify-content: center; */
+	display: flex;
+	/* margin: 0 auto; */
+	justify-content: center;
 	margin-bottom: -20px;
 }
 
 .footer-links a {
-    padding: 0 8px;
-
+	padding: 0 4px;
 }
 
 /* -------- OTHER-------- */
