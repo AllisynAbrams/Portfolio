@@ -1,13 +1,11 @@
-// console.log('hello world')
 
 let sheetUrl =
 	'https://docs.google.com/spreadsheets/d/13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA/edit?usp=sharing';
-// part of this link includes the crazy, long id to this particular spreadsheet
 
 let sheetID = '13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA';
 
 let sheetAsJSON =
-	'https://spreadsheets.google.com/feeds/list/13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA/od6/public/values?alt=json'; /* <-- if we paste this into our browser we are able to see all the data from the google sheet (as either raw or parsed) */
+	'https://spreadsheets.google.com/feeds/list/13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA/od6/public/values?alt=json'; 
 
 $.ajax({ url: sheetAsJSON }).then((data) => {
 	// console.log(data)
@@ -47,14 +45,14 @@ const userInput = [];
 $('form').on('submit', (event) => {
 	event.preventDefault();
 	const inputText = $('input[type="email"]').val();
-	// /*reference element, reference property type, reference value(text)*/
+	/*reference element, reference property type, reference value(text)*/
 	console.log('this is inputText - ', inputText);
 	userInput.push(inputText);
 	console.log('this is the userInput array - ', userInput);
 	$(event.currentTarget).trigger('reset');
 });
 
-// ggoled "how to automatically collapse bootstrap navbar" and used this article as a starting point but wrote my onclick method moreso in the format we learned and chose to listen to nav-link because i want nav to close specifically when user clicks on a link  https://stackoverflow.com/questions/14248194/close-responsive-navbar-automatically
+// googled "how to automatically collapse bootstrap navbar" and used this article as a starting point but wrote my onclick method moreso in the format we learned and chose to listen to nav-link because i want nav to close specifically when user clicks on a link  https://stackoverflow.com/questions/14248194/close-responsive-navbar-automatically
 $('.nav-link').on('click', () => {
 	$('.navbar-collapse').collapse('hide');
 });

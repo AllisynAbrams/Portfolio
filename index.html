@@ -3,16 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Allisyn Abrams Portfolio</title>
+        <title>Allisyn Abrams Portfolio</title>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	</head>
 	<body>
-		<!-- bootstrap nav bar - adjusted here and select re-styling in css doc -->
-		<!-- navbar-light bg-light -->
 
+<!-- /* -------- NAVIGATION BAR -------- */ -->
+<!-- bootstrap nav bar - adjusted here and select re-styling in css doc -->
+        <!-- navbar-light bg-light -->
 		<nav class="navbar navbar-expand-lg navbar-light position-sticky">
 			<span class="navbar-brand mb-0 h1" id="nav-brand-name"
-				>Allisyn Abrams</span
-			>
+				>Allisyn Abrams</span>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -20,8 +21,7 @@
 				data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent"
 				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -32,22 +32,24 @@
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="#aboutme">About</a>
+						<a class="nav-link" href="#anchor-aboutme">About</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="#projects">Projects</a>
+						<a class="nav-link" href="#anchor-projects">Projects</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="#contact">Contact</a>
+						<a class="nav-link" href="#anchor-contact">Contact</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 
+
 		<div class="container">
-			<div id="home">
+<!-- /* -------- HOME / INTRO -------- */ -->
+			<div id="intro">
 				<h2 class="intro-heading" id="aboutme">
 					Hi, I'm <span class="myname">Allisyn</span>..
 				</h2>
@@ -56,15 +58,16 @@
 				</h4>
 			</div>
 
+<!-- /* -------- ABOUT ME -------- */ -->
 			<div id="about">
+                <span class="anchor" id="anchor-aboutme"></span>
 				<h3 class="section-title">About</h3>
 
 				<div class="aboutmemain-container">
 					<img
 						class="headshot"
 						src="https://res.cloudinary.com/dv7inaqe9/image/upload/v1600221631/tfstGTz_nzv8ly-1_orfa1u.jpg"
-						alt="Allisyn headshot"
-					/>
+						alt="Allisyn headshot"/>
 					<p>
 						I am a solution-driven web developer with a
 						user-first/customer-first mindset. Naturally curious, I always like
@@ -75,63 +78,76 @@
 						functionality.
 					</p>
 				</div>
-			</div>
-
-			<div id="projects">
-				<h3 class="section-title">Projects</h3>
-				<p>Below are some of the projects I've recently worked on:</p>
-				<div class="project-cards-container">
-					<div class="project-cards"></div>
-				</div>
-			</div>
-
+            </div>
+            
+<!-- * -------- PROJECTS -------- */  -->
+			
+			    <div id="projects">
+                    <span class="anchor" id="anchor-projects"></span>
+    				<h3 class="section-title">Projects</h3>
+    				<p>Below are some of the projects I've recently worked on:</p>
+    				<div class="project-cards-container">
+    					<div class="project-cards"> 
+                        </div>
+    				</div>
+                </div>
+            
+<!-- /* -------- CONTACT  -------- */ -->
 			<div id="contact">
+                <span class="anchor" id="anchor-contact"></span>
 				<h3 class="section-title">Let's Chat</h3>
 				<p>
 					If you have any questions, would like to collaborate, or just want to
-					say hello, then give the below form some love and submit away.
+					say hello, then give the below form some love and submit away. My direct contact info is also below.
 				</p>
 				<!-- Bootstrap form; adjusted for portfolio -->
-				<form class="contact-form">
-					<div class="form-group">
-						<input
-							type="text"
-							class="form-control"
-							id="FormControlInput1"
-							placeholder="Your name"
-						/>
-					</div>
-					<div class="form-group">
-						<input
-							type="email"
-							class="form-control"
-							id="FormControlInput2"
-							placeholder="Your email address"
-						/>
-					</div>
-					<div class="form-group">
-						<input
-							type="text"
-							class="form-control"
-							id="FormControlInput3"
-							placeholder="Subject"
-						/>
-					</div>
-					<div class="form-group">
-						<textarea
-							class="form-control"
-							id="exampleFormControlTextarea1"
-							rows="3"
-							placeholder="Message"
-						></textarea>
-					</div>
-					<div class="form-group">
-						<button class="submitbutton">Submit</button>
-					</div>
-				</form>
-			</div>
-			<hr />
+				<div class="contact-group">
+				    <form class="contact-form">
+    					<div class="form-group">
+    						<input
+    							type="text"
+    							class="form-control"
+    							id="FormControlInput1"
+    							placeholder="Your name"/>
+    					</div>
+    					<div class="form-group">
+    						<input
+    							type="email"
+    							class="form-control"
+    							id="FormControlInput2"
+    							placeholder="Your email address"/>
+    					</div>
+    					<div class="form-group">
+    						<input
+    							type="text"
+    							class="form-control"
+    							id="FormControlInput3"
+    							placeholder="Subject"/>
+    					</div>
+    					<div class="form-group">
+    						<textarea
+    							class="form-control"
+    							id="exampleFormControlTextarea1"
+    							rows="3"
+    							placeholder="Message"></textarea>
+    					</div>
+    					<div class="form-group">
+    						<button class="submitbutton">Submit</button>
+    					</div>
+                    </form>
+                    <div class="contact-info-box">
+                        <h4>Contact Information</h4>
+                        <br>
+                        <p>Email: allisyn.abrams@gmail.com<br><br>
+                        Location: New Jersey // Greater NYC Area</p>
+                        <a href="https://github.com/AllisynAbrams"><img class="social-icon" src="https://res.cloudinary.com/dv7inaqe9/image/upload/v1600400665/iconfinder_social_media_logo_github_1221585_twh4mc_otww35.jpg" alt="GitHub"></a>
+                       <a href="https://www.linkedin.com/in/allisynabrams"> <img class="social-icon" src="https://res.cloudinary.com/dv7inaqe9/image/upload/v1600400524/iconfinder_linkedin_386655.jpeg_qurzco_yyjyav.jpg" alt="LinkedIn"></a>
+                    </div>
+				</div>
 
+			</div>
+            
+<!-- /* -------- FOOTER -------- */ -->
 			<footer>
 				<div class="footer-links">
 					<a href="https://www.linkedin.com/in/allisynabrams/">LinkedIn</a>

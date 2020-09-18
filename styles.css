@@ -4,6 +4,7 @@
 	/* border: 1px solid; */
 	box-sizing: border-box;
 }
+
 html {
 	scroll-behavior: smooth;
 }
@@ -15,7 +16,7 @@ body {
 
 body .section-title {
 	font-size: 35px;
-	margin-top: 45px;
+	margin-top: 50px;
 }
 
 /* -------- NAVIGATION BAR -------- */
@@ -25,12 +26,15 @@ body .section-title {
 	font-weight: bolder;
 }
 
+.nav-item {
+	padding: 0 10px;
+}
 .nav-item:hover {
 	text-decoration-line: underline;
 }
 
 .navbar-light .navbar-nav .nav-link {
-	color: rgba(0, 0, 0, 0.7);
+	color: rgba(0, 0, 0, 0.8);
 }
 
 a.nav-link {
@@ -38,9 +42,6 @@ a.nav-link {
 	color: black;
 }
 
-.nav-item:hover {
-	text-decoration-line: underline;
-}
 .navbar,
 .navbar-expand-lg {
 	background-color: rgba(249, 229, 229, 100%);
@@ -74,23 +75,23 @@ button:focus {
 
 /* -------- HOME / INTRO -------- */
 
-.container #home {
+.container #intro {
 	grid-area: home;
 	align-items: center;
-	margin-top: 10px;
 	/* background-color: #b5d4c4; */
 }
 
-#home .intro-heading {
+#intro .intro-heading {
 	font-size: 30px;
 	letter-spacing: 3px;
+	margin-top: 25px;
 }
 
-#home .intro-heading .myname {
+#intro .intro-heading .myname {
 	font-weight: bold;
 }
 
-#home .intro-subheading {
+#intro .intro-subheading {
 	font-size: 22px;
 }
 
@@ -110,8 +111,8 @@ button:focus {
 
 #about p {
 	display: flex;
-	justify-self: center;
-	padding: 10px 30px 0px 30px;
+	/* justify-self: center; */
+	padding: 20px 30px 0px 30px;
 	margin-bottom: 0;
 }
 
@@ -119,8 +120,7 @@ button:focus {
 
 .container #projects {
 	grid-area: projects;
-	grid-template-rows: auto auto auto;
-	margin-top: 10px;
+	/* grid-template-rows: auto auto auto; */
 }
 
 .project-cards-container .project-cards {
@@ -159,7 +159,6 @@ button:focus {
 
 .container #contact {
 	grid-area: contact;
-	margin-top: 10px;
 }
 
 .contact-form .form-group {
@@ -169,7 +168,7 @@ button:focus {
 	border-radius: 10px;
 }
 
-.contact-form .submitbutton {
+.submitbutton {
 	padding: 10px 30px 5px 30px;
 	border: none;
 	border-radius: 10px;
@@ -183,12 +182,28 @@ button:focus {
 	box-shadow: 1px 1px 2px #000000;
 }
 
+.contact-info-box {
+	background-color: rgba(249, 229, 229, 100%);
+	padding: 10px 0px;
+	justify-self: center;
+	/* width: 50%; */
+	margin: 50px auto 0;
+	border: 1px solid rgb(192, 192, 192);
+	border-radius: 10px;
+}
+
+.social-icon {
+	height: 30px;
+	width: 30px;
+}
+
 /* -------- FOOTER -------- */
 
 footer {
-	grid-area: footer; 
+	grid-area: footer;
 	align-self: end;
 	padding: 10px 5px;
+	margin-top: 100px;
 }
 
 .footer-links {
@@ -203,8 +218,16 @@ footer {
 }
 
 /* -------- OTHER-------- */
+.anchor {
+	display: block;
+	padding-top: 180px;
+	margin-top: -180px;
+	visibility: hidden;
+}
+/* I was determined to make viisble the start of each section (or above) when the assoicated anchor/"jump tag" on the nav bar is clicked. I researched this quite a bit a found some helpful references on stackoverflow. I created empty spans/classes within each section's parent div. Then, using CSS (above), I added top padding and top negative margin to these spans to make enough sort of "fake space" above them so that when their anchor tags are clicked, the top most part of the section does not go behind/above the sticky nav and is therefore visible.
+https://stackoverflow.com/questions/1418838/html-making-a-link-lead-to-the-anchor-centered-in-the-middle-of-the-page */
 
-/* -------- MEDIA QUERIES-------- */
+/* -------- MEDIA QUERY TABLET-------- */
 
 @media (min-width: 768px) {
 	.aboutmemain-container {
@@ -217,18 +240,69 @@ footer {
 	#about p {
 		align-self: center;
 	}
+
+	#intro .intro-heading {
+		font-size: 45px;
+	}
+
+	#intro .intro-subheading {
+		font-size: 28px;
+	}
 }
 
+/* -------- MEDIA QUERY DESKTOP-------- */
+
 @media (min-width: 1024px) {
-	.card p,
+	body .section-title {
+		font-size: 40px;
+	}
+
+	a.nav-link {
+		font-size: 20px;
+		color: black;
+	}
+
 	#contact p,
-	#contact .submitbutton,
 	#about p,
+	.contact-info-box p,
+	#projects p:first-of-type {
+		font-size: 20px;
+	}
+
+	.card-title {
+		font-size: 22px;
+	}
+
 	#projects p {
-		/* color: red; */
 		font-size: 18px;
 	}
+
 	.card-button {
 		position: relative;
+	}
+
+	.anchor {
+		display: block;
+		padding-top: 90px;
+		margin-top: -90px;
+		visibility: hidden;
+	}
+
+	.contact-group {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.contact-form {
+		margin: 0 auto;
+		width: 60%;
+		margin-left: -60px;
+	}
+
+	.contact-info-box {
+		margin: 0 auto;
+		width: 40%;
 	}
 }
