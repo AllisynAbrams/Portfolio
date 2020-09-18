@@ -147,10 +147,9 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
-```
 1.
 * Though I asked for help with this at first, I prefaced my question(s) with how I thought it could be done. With the help of my squad leader, I was pointed in the right direction. I was extremely proud of myself for asking the right questions and then being able to figure out the rest from there with my understanding of array methods and objects (ex. putting array methods in a function, properly placing functions within other functions, etc.). I was also proud of the fact that this was my fist time utilizing multiple different tools/libraries/external sources in one snipped of code. What I am most proud of regarding this code is my ability to now truly understand how it works, so much so that I was able to help multiple squad members with theirs and do my best to explain it. 
-
+```
 $.ajax({ url: sheetAsJSON }).then((data) => {
 	// console.log('this is data: ', data)
 	const projects = data.feed.entry.map((project) => {
@@ -185,9 +184,13 @@ const render = (array) => {
 		);
 	});
 };
+```
 
+2. I was determined to make viisble the start of each section when the associated anchor/"jump tag" on the nav bar is clicked. I researched this quite a bit a found some helpful references on stackoverflow. I created empty spans/classes within each section's parent div. Then, using CSS, I added top padding and top negative margin to these spans to make enough sort of "fake space" above them so that when their anchor tags are clicked, the top most part of the section does not go behind/above the sticky nav and is therefore visible.
+ - To note, while I am proud of figuring out and playing aroudn with this functionality, I do see it as a sort of temporary fix via HTML/CSS. I look forwad to figuring out how to do the same using JavaScript/jQuery/React in the future!
+Reference: https://stackoverflow.com/questions/1418838/html-making-a-link-lead-to-the-anchor-centered-in-the-middle-of-the-page 
 
-2.
+```
 <li class="nav-item">
 	<a class="nav-link" href="#anchor-projects">Projects</a>
 </li>
@@ -202,11 +205,6 @@ anchor {
 	margin-top: -180px;
 	visibility: hidden;
 }
-
-I was determined to make viisble the start of each section when the associated anchor/"jump tag" on the nav bar is clicked. I researched this quite a bit a found some helpful references on stackoverflow. I created empty spans/classes within each section's parent div. Then, using CSS, I added top padding and top negative margin to these spans to make enough sort of "fake space" above them so that when their anchor tags are clicked, the top most part of the section does not go behind/above the sticky nav and is therefore visible.
- - To note, while I am proud of figuring out and playing aroudn with this functionality, I do see it as a sort of temporary fix via HTML/CSS. I look forwad to figuring out how to do the same using JavaScript/jQuery/React in the future!
-Reference: https://stackoverflow.com/questions/1418838/html-making-a-link-lead-to-the-anchor-centered-in-the-middle-of-the-page 
-
 ```
 
 ## Issues and Resolutions
