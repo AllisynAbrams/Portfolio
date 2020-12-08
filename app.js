@@ -1,11 +1,10 @@
-
 let sheetUrl =
 	'https://docs.google.com/spreadsheets/d/13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA/edit?usp=sharing';
 
 let sheetID = '13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA';
 
 let sheetAsJSON =
-	'https://spreadsheets.google.com/feeds/list/13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA/od6/public/values?alt=json'; 
+	'https://spreadsheets.google.com/feeds/list/13ctCBuBlGwJCzYjHmGPistVh0hm6UPVSR6X1FHwafjA/od6/public/values?alt=json';
 
 $.ajax({ url: sheetAsJSON }).then((data) => {
 	// console.log('this is data: ', data)
@@ -26,7 +25,7 @@ $.ajax({ url: sheetAsJSON }).then((data) => {
 
 const render = (array) => {
 	array.forEach((project) => {
-        // console.log('this is project - ', project)
+		// console.log('this is project - ', project)
 		$('.project-cards').append(
 			`<div class="card" style="width: 18rem;">
             <img src="${project.image}" class="card-img-top" alt="${project.alttext}">
@@ -42,14 +41,11 @@ const render = (array) => {
 	});
 };
 
-
-
 $('form').on('submit', (event) => {
-    event.preventDefault();
-    alert("Thanks for the message! I will be in touch within 48 hours.")
+	event.preventDefault();
+	alert('Thanks for the message! I will be in touch within 48 hours.');
 	$(event.currentTarget).trigger('reset');
 });
-
 
 // googled "how to automatically collapse bootstrap navbar" and used this article as a starting point but wrote my onclick method more so in the format we learned in class. i chose to listen to nav-link because i want nav to close specifically when user clicks on a link  https://stackoverflow.com/questions/14248194/close-responsive-navbar-automatically
 
